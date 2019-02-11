@@ -1,0 +1,25 @@
+{
+ "manifest_version": 2,
+ "name": "eBay GSP Notifier",
+"description": "This extension turns the Global Shipping Program (GSP) fine print red on eBay items pages, when GSP items are shown",
+"version": "1.2",
+"content_scripts": [
+ {
+ "matches": [
+	"https://www.ebay.com/*", 
+	"https://www.ebay.co.uk/*",
+	"https://www.ebay.fr/*",
+	"https://www.ebay.de/*"
+ ],
+  "js": ["content.js"],
+  "run_at": "document_end"
+ }
+],  
+"permissions": [
+              "activeTab"
+             ],
+ "browser_action": {
+
+ }
+
+}
